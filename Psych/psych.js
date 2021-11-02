@@ -1,20 +1,9 @@
 ///Sound on click
 
-// var sound = new Howl({
-//   src: ['audio/Plantasia.mp3'],
-//   volume: 0.8
-// });
-
-
-
-///////NEED to set up current sound
-
-// sound.play();
-
-// var dogSong = new Howl({
-//   urls: ['audio/Plantasia.mp3'],
-//   loop: true,
-// }).play();
+//Step 1 play sounds through howler ---finished
+//Step 2 sounds on click of image icons ---finished
+//Step 3 pause current sounds when playing new ones
+//do i need an array?
 
 var songs = {
   dog: new Howl({
@@ -37,30 +26,36 @@ var songs = {
 
 
 function dogClick() {
-  console.log('isplaying');
+  console.log('dogisplaying');
   // getAudioContext().resume();
+  songs.cake.pause();
+  songs.credit.pause();
   songs.dog.play();
 }
 
 function cakeClick() {
-  console.log('isplaying');
+  console.log('cakeisplaying');
+  songs.dog.pause();
+  songs.credit.pause();
   songs.cake.play();
 }
 
 // function typeClick() {
 //   console.log('isplaying');
-//   songs.type.play;
+//   songs.type.play();
 // }
 
 // function historyClick() {
 //   console.log('isplaying');
-//   songs.history.play;
+//   songs.history.play();
 // }
 
-// function creditClick() {
-//   console.log('isplaying');
-//   songs.credit.play;
-// }
+function logoClick() {
+  console.log('logoisplaying');
+  songs.dog.pause();
+  songs.cake.pause();
+  songs.credit.play();
+}
 
 
 window.human = false;
