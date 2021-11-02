@@ -134,3 +134,26 @@ function autoClick() {
 autoClick();
 setCanvasSize();
 window.addEventListener('resize', setCanvasSize, false);
+
+
+
+///Sound on click
+
+// var dogSong = new Howl({
+//   urls: ['audio/Plantasia.mp3'],
+//   loop: true,
+// }).play();
+
+var songs = {
+  dog: new Howl({
+    src: 'audio/Plantasia.mp3',
+    // html5:true,
+  })
+}
+
+
+function dogClick() {
+  console.log('isplaying');
+  songs.dog.play;
+}
+

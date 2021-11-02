@@ -4,12 +4,17 @@
 <link rel="stylesheet" type ="text/css" href="psych.css"/>
 
 <body>
-   
+    <!-- <audio loop="loop" autoplay="autoplay">
+        <source src="audio/Plantasia.mp3" type="audio/mpeg" />
+    </audio> -->
+
     <div class="images">
-            <img class= 'dog' src="Images/figma/animal.png">
+            <button class="dog" onclick="dogClick()"><img src="Images/figma/animal.png"></button>
+            <!-- <img class= 'dog' src="Images/figma/animal.png"> -->
     </div>
     <div class="next2">
-        <img class="cake" src="Images/figma/food.png">
+        <button class="cake"><img src="Images/figma/food.png"></button>
+        <!-- <img class="cake" src="Images/figma/food.png"> -->
     </div>
     <div class="middle">
         <img class="logo" src="Images/figma/mushy.png">
@@ -17,5 +22,5 @@
     <canvas class="spores"></canvas>
 </body>
 <script src="anime.min.js"></script>
-<script src="howler/howler.js"></script>
+<script src="howler/dist/howler.js"></script>
 <script src="psych.js"></script>
