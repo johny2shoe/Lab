@@ -1,3 +1,68 @@
+///Sound on click
+
+// var sound = new Howl({
+//   src: ['audio/Plantasia.mp3'],
+//   volume: 0.8
+// });
+
+
+
+///////NEED to set up current sound
+
+// sound.play();
+
+// var dogSong = new Howl({
+//   urls: ['audio/Plantasia.mp3'],
+//   loop: true,
+// }).play();
+
+var songs = {
+  dog: new Howl({
+    src: 'audio/Plantasia.mp3',
+    // html5:true,
+  }),
+  cake: new Howl({
+    src: 'audio/Baby_Tears_Blues.mp3'
+  }),
+  type: new Howl({
+    src: 'audio/Symphony_Spider_Plant.mp3'
+  }),
+  history: new Howl({
+    src: 'audio/Swingin_Spathiphyllums.mp3'
+  }),
+  credit: new Howl({
+    src: 'audio/Walk_a_Begonia.mp3'
+  }),
+};
+
+
+function dogClick() {
+  console.log('isplaying');
+  // getAudioContext().resume();
+  songs.dog.play();
+}
+
+function cakeClick() {
+  console.log('isplaying');
+  songs.cake.play;
+}
+
+// function typeClick() {
+//   console.log('isplaying');
+//   songs.type.play;
+// }
+
+// function historyClick() {
+//   console.log('isplaying');
+//   songs.history.play;
+// }
+
+// function creditClick() {
+//   console.log('isplaying');
+//   songs.credit.play;
+// }
+
+
 window.human = false;
 
 var canvasEl = document.querySelector('.spores');
@@ -6,7 +71,7 @@ var numberOfParticules = 100;
 var pointerX = 0;
 var pointerY = 0;
 var tap = ('ontouchstart' in window || navigator.msMaxTouchPoints) ? 'touchstart' : 'mousedown';
-var colors = ['#fc03d7']; //chnaged the color to only one
+var colors = ['#FC89BA','#FF74AF','#97F2B1','#FF7D2E']; //chnaged the color to only one
 // var colors = ['#fc03d7', '#0703fc', '#03fc45', '#f8fc03'];
 
 function setCanvasSize() {
@@ -134,26 +199,3 @@ function autoClick() {
 autoClick();
 setCanvasSize();
 window.addEventListener('resize', setCanvasSize, false);
-
-
-
-///Sound on click
-
-// var dogSong = new Howl({
-//   urls: ['audio/Plantasia.mp3'],
-//   loop: true,
-// }).play();
-
-var songs = {
-  dog: new Howl({
-    src: 'audio/Plantasia.mp3',
-    // html5:true,
-  })
-}
-
-
-function dogClick() {
-  console.log('isplaying');
-  songs.dog.play;
-}
-
