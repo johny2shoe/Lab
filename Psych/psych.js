@@ -145,20 +145,21 @@ window.addEventListener('resize', setCanvasSize, false);
 
 var songs = {
   dog: new Howl({
-    src: 'audio/Plantasia.mp3',
+    src: 'audio/Baby_Tears_Blues.mp3'
     // html5:true,
   }),
   cake: new Howl({
-    src: 'audio/Baby_Tears_Blues.mp3'
+    src: 'audio/Walk_a_Begonia.mp3'
   }),
   type: new Howl({
-    src: 'audio/Symphony_Spider_Plant.mp3'
-  }),
-  history: new Howl({
     src: 'audio/Swingin_Spathiphyllums.mp3'
   }),
-  credit: new Howl({
-    src: 'audio/Walk_a_Begonia.mp3'
+  history: new Howl({
+    src: 'audio/Symphony_Spider_Plant.mp3'
+  }),
+  logo: new Howl({
+    src: 'audio/Plantasia.mp3',
+    
   }),
 };
 
@@ -167,7 +168,7 @@ function dogClick() {
   console.log('dogisplaying');
   // getAudioContext().resume();
   songs.cake.pause();
-  songs.credit.pause();
+  songs.logo.pause();
   songs.history.pause();
   songs.type.pause();
   songs.dog.play();
@@ -176,7 +177,7 @@ function dogClick() {
 function cakeClick() {
   console.log('cakeisplaying');
   songs.dog.pause();
-  songs.credit.pause()
+  songs.logo.pause()
   songs.history.pause();
   songs.type.pause();
   songs.cake.play();
@@ -186,7 +187,7 @@ function typeClick() {
   console.log('isplaying');
   songs.dog.pause();
   songs.cake.pause();
-  songs.credit.pause();
+  songs.logo.pause();
   songs.history.pause();
   songs.type.play();
 }
@@ -195,7 +196,7 @@ function historyClick() {
   console.log('isplaying');
   songs.dog.pause();
   songs.cake.pause();
-  songs.credit.pause();
+  songs.logo.pause();
   songs.type.pause();
   songs.history.play();
 }
@@ -206,5 +207,5 @@ function logoClick() {
   songs.cake.pause();
   songs.history.pause();
   songs.type.pause();;
-  songs.credit.play();
+  songs.logo.play();
 }
