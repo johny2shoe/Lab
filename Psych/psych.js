@@ -44,7 +44,7 @@ function dogClick() {
 
 function cakeClick() {
   console.log('isplaying');
-  songs.cake.play;
+  songs.cake.play();
 }
 
 // function typeClick() {
