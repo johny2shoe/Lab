@@ -1,63 +1,3 @@
-///Sound on click
-
-//Step 1 play sounds through howler ---finished
-//Step 2 sounds on click of image icons ---finished
-//Step 3 pause current sounds when playing new ones
-//do i need an array?
-
-var songs = {
-  dog: new Howl({
-    src: 'audio/Plantasia.mp3',
-    // html5:true,
-  }),
-  cake: new Howl({
-    src: 'audio/Baby_Tears_Blues.mp3'
-  }),
-  type: new Howl({
-    src: 'audio/Symphony_Spider_Plant.mp3'
-  }),
-  history: new Howl({
-    src: 'audio/Swingin_Spathiphyllums.mp3'
-  }),
-  credit: new Howl({
-    src: 'audio/Walk_a_Begonia.mp3'
-  }),
-};
-
-
-function dogClick() {
-  console.log('dogisplaying');
-  // getAudioContext().resume();
-  songs.cake.pause();
-  songs.credit.pause();
-  songs.dog.play();
-}
-
-function cakeClick() {
-  console.log('cakeisplaying');
-  songs.dog.pause();
-  songs.credit.pause();
-  songs.cake.play();
-}
-
-// function typeClick() {
-//   console.log('isplaying');
-//   songs.type.play();
-// }
-
-// function historyClick() {
-//   console.log('isplaying');
-//   songs.history.play();
-// }
-
-function logoClick() {
-  console.log('logoisplaying');
-  songs.dog.pause();
-  songs.cake.pause();
-  songs.credit.play();
-}
-
-
 window.human = false;
 
 var canvasEl = document.querySelector('.spores');
@@ -194,3 +134,63 @@ function autoClick() {
 autoClick();
 setCanvasSize();
 window.addEventListener('resize', setCanvasSize, false);
+
+
+///Sound on click
+
+//Step 1 play sounds through howler ---finished
+//Step 2 sounds on click of image icons ---finished
+//Step 3 pause current sounds when playing new ones
+//do i need an array?
+
+var songs = {
+  dog: new Howl({
+    src: 'audio/Plantasia.mp3',
+    // html5:true,
+  }),
+  cake: new Howl({
+    src: 'audio/Baby_Tears_Blues.mp3'
+  }),
+  type: new Howl({
+    src: 'audio/Symphony_Spider_Plant.mp3'
+  }),
+  history: new Howl({
+    src: 'audio/Swingin_Spathiphyllums.mp3'
+  }),
+  credit: new Howl({
+    src: 'audio/Walk_a_Begonia.mp3'
+  }),
+};
+
+
+function dogClick() {
+  console.log('dogisplaying');
+  // getAudioContext().resume();
+  songs.cake.pause();
+  songs.credit.pause();
+  songs.dog.play();
+}
+
+function cakeClick() {
+  console.log('cakeisplaying');
+  songs.dog.pause();
+  songs.credit.pause();
+  songs.cake.play();
+}
+
+// function typeClick() {
+//   console.log('isplaying');
+//   songs.type.play();
+// }
+
+// function historyClick() {
+//   console.log('isplaying');
+//   songs.history.play();
+// }
+
+function logoClick() {
+  console.log('logoisplaying');
+  songs.dog.pause();
+  songs.cake.pause();
+  songs.credit.play();
+}
