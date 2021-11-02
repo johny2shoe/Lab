@@ -168,29 +168,43 @@ function dogClick() {
   // getAudioContext().resume();
   songs.cake.pause();
   songs.credit.pause();
+  songs.history.pause();
+  songs.type.pause();
   songs.dog.play();
 }
 
 function cakeClick() {
   console.log('cakeisplaying');
   songs.dog.pause();
-  songs.credit.pause();
+  songs.credit.pause()
+  songs.history.pause();
+  songs.type.pause();
   songs.cake.play();
 }
 
-// function typeClick() {
-//   console.log('isplaying');
-//   songs.type.play();
-// }
+function typeClick() {
+  console.log('isplaying');
+  songs.dog.pause();
+  songs.cake.pause();
+  songs.credit.pause();
+  songs.history.pause();
+  songs.type.play();
+}
 
-// function historyClick() {
-//   console.log('isplaying');
-//   songs.history.play();
-// }
+function historyClick() {
+  console.log('isplaying');
+  songs.dog.pause();
+  songs.cake.pause();
+  songs.credit.pause();
+  songs.type.pause();
+  songs.history.play();
+}
 
 function logoClick() {
   console.log('logoisplaying');
   songs.dog.pause();
   songs.cake.pause();
+  songs.history.pause();
+  songs.type.pause();;
   songs.credit.play();
 }

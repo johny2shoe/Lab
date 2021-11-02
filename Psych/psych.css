@@ -48,3 +48,17 @@ button {
     top: 30%;
     width: 40vh;
 }
+
+.type{
+  position: absolute;
+  left: 0px;
+  bottom: 0;
+  margin: 10px;
+}
+
+.history{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 10px;
+}
