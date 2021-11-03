@@ -219,3 +219,8 @@ document.getElementById("logo").onclick = function() {
     songs.logo.pause();
   }
 }
+
+
+let colors {
+  
+}
