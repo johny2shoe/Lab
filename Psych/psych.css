@@ -17,46 +17,48 @@ button {
 	outline: inherit;
 }
 
-.images{
-    position: absolute;
-    width: 50%;
-}
-.dog{
-    width: 40%;
-    position: absolute;
-    left: 0px;
-}
-
-.next2{
-    position: absolute;
-    right: 0px;
-}
-
-.cake{
-    position: absolute;
-    right: 0px;
-    height: 40vh;
-
-}
-/* .middle{
-    height: 40%;
+/* .imageContainer {
+  display: flex;
 } */
 
-.logo{
-    position: absolute;
-    left: 37%;
-    top: 30%;
-    width: 40vh;
+.dogContainer{
+  display:flex;
+  width: 35%;
+  height: 35%;
+  position: absolute;
+  left: 0px;
+  margin: 10px;
 }
 
-.type{
+#barb {
+  margin-left: 20px;
+  opacity: 0%;
+}
+
+
+#cake{
+  position: absolute;
+  right: 0px;
+  height: 40vh;
+  margin: 10px;
+}
+
+
+#logo{
+    position: absolute;
+    left: 41%;
+    top: 35%;
+    width: 30vh;
+}
+
+#type{
   position: absolute;
   left: 0px;
   bottom: 0;
   margin: 10px;
 }
 
-.history{
+#history{
   position: absolute;
   right: 0;
   bottom: 0;

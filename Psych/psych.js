@@ -140,8 +140,9 @@ window.addEventListener('resize', setCanvasSize, false);
 
 //Step 1 play sounds through howler ---finished
 //Step 2 sounds on click of image icons ---finished
-//Step 3 pause current sounds when playing new ones
+//Step 3 pause current sounds when playing new ones ---finished
 //do i need an array?
+//Step 4 pause current song when logo is clicked, prevent repeating songs
 
 var songs = {
   dog: new Howl({
@@ -164,7 +165,7 @@ var songs = {
 };
 
 
-function dogClick() {
+document.getElementById("dog").onclick = function() {
   console.log('dogisplaying');
   // getAudioContext().resume();
   songs.cake.pause();
@@ -172,9 +173,14 @@ function dogClick() {
   songs.history.pause();
   songs.type.pause();
   songs.dog.play();
+  if (document.getElementById("barb").style.opacity = "0%") {
+    document.getElementById("barb").style.opacity = "100%";
+  } else {
+    document.getElementById("barb").style.opacity = "0%";
+  }
 }
 
-function cakeClick() {
+document.getElementById("cake").onclick = function() {
   console.log('cakeisplaying');
   songs.dog.pause();
   songs.logo.pause()
@@ -183,7 +189,7 @@ function cakeClick() {
   songs.cake.play();
 }
 
-function typeClick() {
+document.getElementById("type").onclick = function() {
   console.log('isplaying');
   songs.dog.pause();
   songs.cake.pause();
@@ -192,7 +198,7 @@ function typeClick() {
   songs.type.play();
 }
 
-function historyClick() {
+document.getElementById("history").onclick = function() {
   console.log('isplaying');
   songs.dog.pause();
   songs.cake.pause();
@@ -201,11 +207,15 @@ function historyClick() {
   songs.history.play();
 }
 
-function logoClick() {
+document.getElementById("logo").onclick = function() {
   console.log('logoisplaying');
   songs.dog.pause();
   songs.cake.pause();
   songs.history.pause();
   songs.type.pause();;
-  songs.logo.play();
+  if (songs.logo.pause()){
+    songs.logo.play();
+  } else {
+    songs.logo.pause();
+  }
 }
