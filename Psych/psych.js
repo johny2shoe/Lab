@@ -177,7 +177,7 @@ document.getElementById("dog").onclick = function() {
     document.getElementById("barb").style.opacity = "100%";
   } else {
     document.getElementById("barb").style.opacity = "0%";
-  }
+  };
 }
 
 document.getElementById("cake").onclick = function() {
@@ -221,6 +221,6 @@ document.getElementById("logo").onclick = function() {
 }
 
 
-let colors {
-  
-}
+// let colors {
+
+// }

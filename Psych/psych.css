@@ -7,6 +7,48 @@ html, body{
   cursor: url('path-to-image.png'), auto;	
 }
 
+@keyframes wiggle {
+  0% { transform: translate(5px, 0); }
+  50% { transform: translate(-5px, 0); }
+  100% { transform: translate(5px, 0); }
+}
+
+@keyframes wobble {
+  0% { transform: rotate(20deg); }
+  50% { transform: rotate(-20deg); }
+  100% { transform: rotate(20deg); }
+}
+
+@keyframes zigzag {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(30px, 30px); }
+  50% { transform: translate(30px, 0px); }
+  75% { transform: translate(0px, 30px); }
+  100% { transform: translate(0px, 0px); }
+}
+
+
+@keyframes spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes skewer {
+  0% { transform: skew(10deg); }
+  50% { transform: skew(-10deg); }
+  100% { transform: skew(10deg); }
+}
+
+@keyframes squishsquash {
+  0% { transform: scale(1, 1); }
+  50% { transform: scale(.8, 1.2); }
+  100% { transform: scale(1, 1); }
+}
+
 button {
 	background: none;
 	color: inherit;
@@ -30,8 +72,34 @@ button {
   margin: 10px;
 }
 
+#dog:hover {
+  /* animation: wiggle 1s infinite; */
+  animation: wiggle 250ms infinite;
+  animation: zigzag 2s infinite;
+}
+
+#cake:hover {
+  animation: wiggle 250ms infinite;
+  animation: wobble 1.5s infinite;
+}
+
+#logo:hover {
+  animation: wiggle 150ms infinite;
+  animation: spinning 2.5s infinite;
+}
+
+#type:hover {
+  animation: squishsquash 1s infinite;
+}
+
+#history:hover {
+  /* animation: wiggle 250ms infinite; */
+  animation: skewer 2s infinite;
+}
+
 #barb {
   margin-left: 20px;
+  transition: opacity 2s;
   opacity: 0%;
 }
 
